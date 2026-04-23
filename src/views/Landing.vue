@@ -28,7 +28,7 @@
                   Projeto desenvolvido pelos alunos do curso do 3º semestre de Nutrição, turma de 2025 para compartilhar, as receitas aprendidas em aula, combinando ciência, sabor e saúde.
                 </p>
                 <p class="mt-2 text-md text-blueGray-300">
-                  👥 Equipe: Ana, Beatriz, Carlos, Daniela e Eduardo
+                  Equipe: Luana Domingos Casagrande, Laís Bordini Mestriner, Léo Castro Doizé, Julia Gomes Brandão Clini, Ana Luiza Soares Lera
                 </p>
               </div>
             </div>
@@ -62,10 +62,9 @@
                    <!-- Título da Receita -->
           <div class="flex flex-wrap justify-center text-center mb-16 pt-8">
             <div class="w-full lg:w-8/12 px-4">
-              <h2 class="text-4xl font-semibold text-emerald-700">POKE VEGANO</h2>
-              <p class="text-lg leading-relaxed m-4 text-blueGray-600">
-                Técnica Dietética - UNICAMP
-              </p>
+              <h2 class="mt-12 text-center text-2xl font-bold text-emerald-700 py-4">
+                  POKE VEGANO
+                </h2>
             </div>
           </div>
 
@@ -162,7 +161,7 @@
                   Seu navegador não suporta vídeos.
                 </video>
                 <div class="p-4 bg-emerald-50 text-center">
-                  <p class="text-sm text-emerald-700">📹 Vídeo da preparação do Poke Vegano - Técnica Dietética</p>
+                  <p class="text-sm text-emerald-700">Vídeo da preparação do Poke Vegano - Técnica Dietética</p>
                 </div>
               </div>
             </div>
@@ -223,9 +222,9 @@
                     class="rounded-lg shadow-md max-w-full h-auto"
                   />
                 </div>
-                <p class="text-center text-sm text-blueGray-500 mt-4">
-                  Equipe de Técnica Dietética - UNICAMP
-                </p>
+                <h2 class="text-center text-2xl font-bold text-emerald-700 py-4">
+                  POKE VEGANO
+                </h2>
               </div>
             </div>
           </div>
@@ -240,53 +239,53 @@
             </div>
           </div>
 
-          <div class="flex flex-wrap justify-center">
+            <div class="flex flex-wrap justify-center">
             <div class=" md:w-3/12 lg:w-2/12 px-4 mb-8">
               <div class="text-center">
-                <div class="w-32 h-32 bg-emerald-100 rounded-full mx-auto flex items-center justify-center">
-                  <i class="fas fa-user-graduate text-5xl text-emerald-600"></i>
-                </div>
-                <h5 class="text-xl font-bold mt-4">Ana Silva</h5>
-                <p class="text-sm text-blueGray-400">Líder do grupo</p>
+              <div class="w-32 h-32 bg-emerald-100 rounded-full mx-auto flex items-center justify-center">
+                <i class="fas fa-user-graduate text-5xl text-emerald-600"></i>
+              </div>
+              <h5 class="text-xl font-bold mt-4">Luana Domingos Casagrande</h5>
+              <p class="text-sm text-blueGray-400">Líder do grupo</p>
               </div>
             </div>
             <div class=" md:w-3/12 lg:w-2/12 px-4 mb-8">
               <div class="text-center">
-                <div class="w-32 h-32 bg-emerald-100 rounded-full mx-auto flex items-center justify-center">
-                  <i class="fas fa-user-graduate text-5xl text-emerald-600"></i>
-                </div>
-                <h5 class="text-xl font-bold mt-4">Beatriz Santos</h5>
-                <p class="text-sm text-blueGray-400">Responsável pelo preparo</p>
+              <div class="w-32 h-32 bg-emerald-100 rounded-full mx-auto flex items-center justify-center">
+                <i class="fas fa-user-graduate text-5xl text-emerald-600"></i>
+              </div>
+              <h5 class="text-xl font-bold mt-4">Laís Bordini Mestriner</h5>
+              <p class="text-sm text-blueGray-400">Responsável pelo preparo</p>
               </div>
             </div>
             <div class=" md:w-3/12 lg:w-2/12 px-4 mb-8">
               <div class="text-center">
-                <div class="w-32 h-32 bg-emerald-100 rounded-full mx-auto flex items-center justify-center">
-                  <i class="fas fa-user-graduate text-5xl text-emerald-600"></i>
-                </div>
-                <h5 class="text-xl font-bold mt-4">Carlos Oliveira</h5>
-                <p class="text-sm text-blueGray-400">Registro fotográfico</p>
+              <div class="w-32 h-32 bg-emerald-100 rounded-full mx-auto flex items-center justify-center">
+                <i class="fas fa-user-graduate text-5xl text-emerald-600"></i>
+              </div>
+              <h5 class="text-xl font-bold mt-4">Léo Castro Doizé</h5>
+              <p class="text-sm text-blueGray-400">Registro fotográfico</p>
               </div>
             </div>
             <div class=" md:w-3/12 lg:w-2/12 px-4 mb-8">
               <div class="text-center">
-                <div class="w-32 h-32 bg-emerald-100 rounded-full mx-auto flex items-center justify-center">
-                  <i class="fas fa-user-graduate text-5xl text-emerald-600"></i>
-                </div>
-                <h5 class="text-xl font-bold mt-4">Daniela Lima</h5>
-                <p class="text-sm text-blueGray-400">Análise nutricional</p>
+              <div class="w-32 h-32 bg-emerald-100 rounded-full mx-auto flex items-center justify-center">
+                <i class="fas fa-user-graduate text-5xl text-emerald-600"></i>
+              </div>
+              <h5 class="text-xl font-bold mt-4">Julia Gomes Brandão Clini</h5>
+              <p class="text-sm text-blueGray-400">Análise nutricional</p>
               </div>
             </div>
             <div class=" md:w-3/12 lg:w-2/12 px-4 mb-8">
               <div class="text-center">
-                <div class="w-32 h-32 bg-emerald-100 rounded-full mx-auto flex items-center justify-center">
-                  <i class="fas fa-user-graduate text-5xl text-emerald-600"></i>
-                </div>
-                <h5 class="text-xl font-bold mt-4">Eduardo Costa</h5>
-                <p class="text-sm text-blueGray-400">Edição do vídeo</p>
+              <div class="w-32 h-32 bg-emerald-100 rounded-full mx-auto flex items-center justify-center">
+                <i class="fas fa-user-graduate text-5xl text-emerald-600"></i>
+              </div>
+              <h5 class="text-xl font-bold mt-4">Ana Luiza Soares Lera</h5>
+              <p class="text-sm text-blueGray-400">Edição do vídeo</p>
               </div>
             </div>
-          </div>
+            </div>
         </div>
       </section>
 
