@@ -161,7 +161,7 @@
                   Seu navegador não suporta vídeos.
                 </video>
                 <div class="p-4 bg-emerald-50 text-center">
-                  <p class="text-sm text-emerald-700">Vídeo da preparação do Poke Vegano - Técnica Dietética</p>
+                  <p class="text-sm text-emerald-700">Vídeo da apresentação do Poke Vegano - Técnica Dietética</p>
                 </div>
               </div>
             </div>
@@ -195,7 +195,7 @@
                   src="/img-nutrition/poke-vegano2.webp"
                   class="w-full h-64 object-cover"
                 />
-                <div class="p-3 text-center text-sm text-blueGray-600">Detalhe dos ingredientes</div>
+                <div class="p-3 text-center text-sm text-blueGray-600">Visão dos ingredientes</div>
               </div>
             </div>
             <div class="w-full md:w-4/12 lg:w-4/12 px-4 mb-8">
@@ -222,9 +222,7 @@
                     class="rounded-lg shadow-md max-w-full h-auto"
                   />
                 </div>
-                <h2 class="text-center text-2xl font-bold text-emerald-700 py-4">
-                  POKE VEGANO
-                </h2>
+                
               </div>
             </div>
           </div>
