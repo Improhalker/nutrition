@@ -480,7 +480,7 @@ Tenho 21 anos e sou de Rio Claro - SP. Gosto de cozinhar, principalmente receita
                   <i
                     class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"
                   ></i>
-                 Rio Claro - SP
+                 Limeira - SP
                 </div>
                 <div class="mb-2 text-blueGray-600 mt-10">
                   <i
