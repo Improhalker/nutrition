@@ -86,7 +86,7 @@
       </div>
       <div class="container mx-auto">
         <div class="flex flex-wrap items-center">
-          <div class="w-full md:w-6/12 lg:w-4/12 px-2 md:px-4 mr-auto ml-auto -mt-32">
+          <div class="w-full md:w-6/12 lg:w-4/12 px-2 md:px-4 mr-auto ml-auto md:-mt-32">
             <div
               style="min-height: 535px"
               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-emerald-500"
@@ -129,7 +129,7 @@
               </blockquote>
             </div>
           </div>
-          <div class="w-full md:w-6/12 lg:w-4/12 px-2 md:px-4 mr-auto ml-auto -mt-32">
+          <div class="w-full md:w-6/12 lg:w-4/12 px-2 md:px-4 mr-auto ml-auto md:-mt-32">
             <div
               style="min-height: 535px"
               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-emerald-500"
@@ -169,7 +169,7 @@
               </blockquote>
             </div>
           </div>
-          <div class="w-full md:w-6/12 lg:w-4/12 px-2 md:px-4 mr-auto ml-auto -mt-32">
+          <div class="w-full md:w-6/12 lg:w-4/12 px-2 md:px-4 mr-auto ml-auto md:-mt-32">
             <div
               style="min-height: 535px"
               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-emerald-500"
@@ -289,7 +289,7 @@
       <div class="container mx-auto overflow-hidden pb-20">
         <div class="flex flex-wrap items-center" id="ficha-tecnica">
           <!-- TEXTO -->
-          <div class="w-full md:w-6/12 lg:w-5/12 px-12 md:px-4 ml-auto mr-auto mt-32">
+          <div class="w-full md:w-6/12 lg:w-5/12 px-12 md:px-4 ml-auto mr-auto md:-mt-32">
             <div
               class="text-emerald-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
             >
@@ -458,7 +458,7 @@
             </a>
           </div>
 
-          <div class="w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative">
+          <div class="w-full md:w-4/12 px-4 mr-auto ml-auto md:mt-32 relative">
             <i
               class="fab fa-github text-blueGray-700 text-55 absolute -top-150-px -right-100 left-auto opacity-80"
             ></i>
