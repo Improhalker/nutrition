@@ -59,12 +59,12 @@
       </div>
 
       <img
-        class="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
+        class="hidden md:block absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
         :src="patternVue"
         alt="..."
       />
     </section>
-    <section id="participantes" class="mt-48 md:mt-64 pb-40 relative bg-blueGray-100">
+    <section id="participantes" class="mt-16 md:mt-64 pb-40 relative bg-blueGray-100">
       <div
         class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
         style="transform: translateZ(0)"
@@ -523,7 +523,7 @@
         </a>
 
         <a
-          href="/pdfs/ficha-tecnica.pdf"
+          href="/ficha"
           target="_blank"
           class="sm:ml-1 text-white font-bold px-6 py-4 rounded mr-1 mb-1 bg-blueGray-700 hover:bg-blueGray-600 uppercase text-sm shadow transition-all duration-150"
         >
