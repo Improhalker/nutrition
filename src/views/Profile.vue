@@ -426,7 +426,7 @@ Tenho 21 anos e sou de Rio Claro - SP. Gosto de cozinhar, principalmente receita
                   <div class="relative">
                     <img
                       alt="..."
-                      src="img-nutrition/luana.jpg"
+                      src="img-nutrition/.jpg"
                       class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
                     />
                   </div>
