@@ -342,7 +342,7 @@
 
             <!-- CTA MELHORADO -->
             <a
-              href="/pdfs/ficha-tecnica.pdf"
+              href="/ficha"
               target="_blank"
               class="inline-block text-white font-bold px-6 py-3 rounded bg-emerald-500 hover:bg-emerald-600 shadow-lg transition-all duration-150"
             >

@@ -30,6 +30,7 @@ import Register from "@/views/auth/Register.vue";
 // views without layouts
 
 import Landing from "@/views/Landing.vue";
+import Ficha from "@/views/Ficha.vue";
 import Profile from "@/views/Profile.vue";
 import Index from "@/views/Index.vue";
 
@@ -77,6 +78,10 @@ const routes = [
   {
     path: "/landing",
     component: Landing,
+  },
+    {
+    path: "/ficha",
+    component: Ficha,
   },
   {
     path: "/profile",
