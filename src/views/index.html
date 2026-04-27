@@ -1,0 +1,597 @@
+									<style>
+  .pricing-section {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: inherit;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .pricing-section *, .pricing-section *::before, .pricing-section *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* === HEADER === */
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .pricing-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #3b4450;
+    margin-bottom: 28px;
+  }
+
+  .pricing-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .pricing-pills span {
+    display: inline-block;
+    padding: 9px 20px;
+    border: 1px solid #d4d4d8;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3b4450;
+    background: #fff;
+  }
+
+  /* === SUBHEADER ROW === */
+  .pricing-subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 0 4px;
+  }
+
+  .pricing-subheader-left h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3b4450;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .pricing-subheader-left p {
+    font-size: 15px;
+    color: #888;
+  }
+
+  .pricing-subheader-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  /* === ANNUAL TOGGLE === */
+  .annual-toggle-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .annual-toggle-wrap label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3b4450;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .annual-toggle {
+    width: 52px;
+    height: 28px;
+    background: #d4d4d8;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+    border: none;
+    outline: none;
+  }
+
+  .annual-toggle.active {
+    background: #e9702e;
+  }
+
+  .annual-toggle::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  }
+
+  .annual-toggle.active::after {
+    transform: translateX(24px);
+  }
+
+  /* === INDIVIDUAL / COMPANY TOGGLE === */
+  .type-toggle {
+    display: flex;
+    background: #f4f4f5;
+    border-radius: 100px;
+    padding: 4px;
+    border: 1px solid #e4e4e7;
+  }
+
+  .type-toggle button {
+    padding: 8px 22px;
+    border: none;
+    border-radius: 100px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background: transparent;
+    color: #888;
+    transition: all 0.25s;
+  }
+
+  .type-toggle button.active {
+    background: #fff;
+    color: #3b4450;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-weight: 600;
+  }
+
+  /* === PRICING GRID === */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .pricing-grid .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    border: 1px solid #e4e4e7;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+    position: relative;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing-grid .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 24px 48px rgba(0,0,0,0.12);
+  }
+
+  .pricing-grid .card.popular {
+    background: linear-gradient(135deg, #3b4450 0%, #4a5568 100%);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 24px 48px rgba(0,0,0,0.12);
+    padding-top: 36px;
+    transform: scale(1.03);
+    z-index: 2;
+  }
+
+  .pricing-grid .card.popular:hover {
+    transform: scale(1.03) translateY(-4px);
+  }
+
+  .pricing-grid .popular-tag {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e9702e;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 5px 18px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  .pricing-grid .card-name {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 4px;
+  }
+
+  .pricing-grid .card.popular .card-name { color: rgba(255,255,255,0.5); }
+
+  .pricing-grid .card-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #3b4450;
+  }
+
+  .pricing-grid .card.popular .card-title { color: #fff; }
+
+  .pricing-grid .card-desc {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+
+  .pricing-grid .card.popular .card-desc { color: rgba(255,255,255,0.5); }
+
+  /* === PRICE === */
+  .pricing-grid .price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    margin-bottom: 2px;
+  }
+
+  .pricing-grid .price-currency {
+    font-size: 18px;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-top: 6px;
+    color: #3b4450;
+  }
+
+  .pricing-grid .price-amount {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #3b4450;
+    transition: opacity 0.2s;
+  }
+
+  .pricing-grid .card.popular .price-currency,
+  .pricing-grid .card.popular .price-amount { color: #fff; }
+
+  .pricing-grid .price-original {
+    font-size: 16px;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-left: 4px;
+    transition: opacity 0.2s;
+  }
+
+  .pricing-grid .card.popular .price-original { color: rgba(255,255,255,0.35); }
+
+  .pricing-grid .price-period {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 24px;
+  }
+
+  .pricing-grid .card.popular .price-period { color: rgba(255,255,255,0.45); }
+
+  /* === CTA === */
+  .pricing-grid .cta {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    margin-bottom: 8px;
+  }
+
+  .pricing-grid .cta-primary {
+    background: #3b4450;
+    color: #fff;
+  }
+
+  .pricing-grid .cta-primary:hover { background: #4a5568; }
+
+  .pricing-grid .card.popular .cta-primary {
+    background: #e9702e;
+    color: #fff;
+  }
+
+  .pricing-grid .card.popular .cta-primary:hover { background: #d4622a; }
+
+  .pricing-grid .cta-secondary {
+    background: transparent;
+    color: #888;
+    border: none;
+  }
+
+  .pricing-grid .cta-secondary:hover { color: #3b4450; }
+  .pricing-grid .card.popular .cta-secondary { color: rgba(255,255,255,0.5); }
+  .pricing-grid .card.popular .cta-secondary:hover { color: #fff; }
+
+  /* === FEATURES === */
+  .pricing-grid .divider {
+    height: 1px;
+    background: #e4e4e7;
+    margin: 20px 0;
+  }
+
+  .pricing-grid .card.popular .divider { background: rgba(255,255,255,0.12); }
+
+  .pricing-grid .features-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 14px;
+  }
+
+  .pricing-grid .card.popular .features-label { color: rgba(255,255,255,0.45); }
+
+  .pricing-grid .feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .pricing-grid .feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    color: #3b4450;
+    line-height: 1.4;
+  }
+
+  .pricing-grid .card.popular .feature-list li { color: rgba(255,255,255,0.85); }
+
+  .pricing-grid .feature-list li svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    color: #e9702e;
+  }
+
+  .pricing-grid .new-badge {
+    font-size: 10px;
+    font-weight: 700;
+    background: rgba(233,112,46,0.12);
+    color: #e9702e;
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .pricing-grid .card.popular .new-badge {
+    background: rgba(233,112,46,0.2);
+    color: #ffb088;
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 1100px) {
+    .pricing-grid {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .pricing-grid .card.popular { transform: scale(1.02); }
+    .pricing-grid .card.popular:hover { transform: scale(1.02) translateY(-4px); }
+    .pricing-subheader { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 700px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      gap: 20px;
+    }
+    .pricing-grid .card.popular { transform: none; }
+    .pricing-grid .card.popular:hover { transform: translateY(-4px); }
+    .pricing-header h1 { font-size: 28px; }
+    .pricing-pills { gap: 8px; }
+    .pricing-pills span { padding: 7px 14px; font-size: 12px; }
+    .pricing-subheader { margin-bottom: 28px; }
+    .pricing-subheader-right { flex-direction: column; align-items: flex-start; }
+    .annual-toggle-wrap { flex-wrap: wrap; }
+    .pricing-grid .price-amount { font-size: 40px; }
+    .pricing-grid .card { padding: 28px 20px; }
+  }
+</style>
+
+<div class="pricing-section">
+
+  <!-- HEADER -->
+  <div class="pricing-header">
+    <h1>Ricochet Plans &amp; Pricing</h1>
+    <p style="font-size:15px;color:#888;margin-bottom:28px;">Fast and Easy Onboarding Process with Dedicated Customer Support</p>
+    <div class="pricing-pills">
+      <span>Telephony</span>
+      <span>SMS Messaging</span>
+      <span>Scalable Storage</span>
+      <span>Workflow Automation</span>
+      <span>Custom Reporting</span>
+      <span>Reports</span>
+    </div>
+  </div>
+
+  <!-- SUBHEADER -->
+  <div class="pricing-subheader" style="justify-content:flex-end;">
+    <div class="pricing-subheader-right">
+      <div class="annual-toggle-wrap">
+        <label for="annualToggle">Save more with annual plans</label>
+        <button class="annual-toggle" id="annualToggle" role="switch" aria-checked="false"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="pricing-grid">
+
+    <!-- Shuttle -->
+    <div class="card" data-annual="29" data-monthly="35" data-annual-original="" data-monthly-original="">
+      <div class="card-name">Starter</div>
+      <div class="card-title">Shuttle Plan</div>
+      <div class="price-row">
+        <span class="price-currency">$</span>
+        <span class="price-amount">35</span>
+        <span class="price-original" style="display:none"></span>
+      </div>
+      <div class="price-period">/user/month</div>
+      <a href="#" class="cta cta-primary">Buy now</a>
+      
+      <div class="card-desc">Get CRM &amp; Phone Services</div>
+      <div class="divider"></div>
+      <div class="features-label">What’s included</div>
+      <ul class="feature-list">
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Telephony</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> CRM/LMS</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Reporting</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Storage</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Support</li>
+      </ul>
+    </div>
+
+    <!-- Cruiser -->
+    <div class="card" data-annual="39" data-monthly="45" data-annual-original="" data-monthly-original="">
+      <div class="card-name">Growth</div>
+      <div class="card-title">Cruiser Plan</div>
+      <div class="price-row">
+        <span class="price-currency">$</span>
+        <span class="price-amount">45</span>
+        <span class="price-original" style="display:none"></span>
+      </div>
+      <div class="price-period">/user/month</div>
+      <a href="#" class="cta cta-primary">Buy now</a>
+      
+      <div class="card-desc">Get CRM, Phone &amp; SMS Services</div>
+      <div class="divider"></div>
+      <div class="features-label">Everything in Shuttle Plan PLUS</div>
+      <ul class="feature-list">
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> SMS (Texting) <span class="new-badge">New</span></li>
+      </ul>
+    </div>
+
+    <!-- Booster -->
+    <div class="card" data-annual="85" data-monthly="102" data-annual-original="" data-monthly-original="">
+      <div class="card-name">Scale</div>
+      <div class="card-title">Booster Plan</div>
+      <div class="price-row">
+        <span class="price-currency">$</span>
+        <span class="price-amount">102</span>
+        <span class="price-original" style="display:none"></span>
+      </div>
+      <div class="price-period">/user/month</div>
+      <a href="#" class="cta cta-primary">Buy now</a>
+      
+      <div class="card-desc">Get CRM, Phone, SMS &amp; Email Services</div>
+      <div class="divider"></div>
+      <div class="features-label">Everything in Cruiser Plan PLUS</div>
+      <ul class="feature-list">
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Emailing <span class="new-badge">New</span></li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Automation</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Spam Guru</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Caller ID Masking</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Lead Performance Reporting</li>
+      </ul>
+    </div>
+
+    <!-- Explorer -->
+    <div class="card" data-annual="125" data-monthly="150" data-annual-original="150" data-monthly-original="">
+      <div class="card-name">Pro</div>
+      <div class="card-title">Explorer Plan</div>
+      <div class="price-row">
+        <span class="price-currency">$</span>
+        <span class="price-amount">150</span>
+        <span class="price-original" style="display: none;">$150</span>
+      </div>
+      <div class="price-period">/user/month</div>
+      <a href="#" class="cta cta-primary">Buy now</a>
+      
+      <div class="card-desc">Get CRM, Phone, Dialer, SMS, Marketing Automation &amp; Email Services</div>
+      <div class="divider"></div>
+      <div class="features-label">Everything in Booster Plan PLUS</div>
+      <ul class="feature-list">
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Integrations <span class="new-badge">New</span></li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Email Reporting</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Live Zoom Support</li>
+      </ul>
+    </div>
+
+    <!-- Galaxy (Popular) -->
+    <div class="card popular" data-annual="165" data-monthly="198" data-annual-original="198" data-monthly-original="">
+      <div class="popular-tag">Most Popular</div>
+      <div class="card-name">Enterprise</div>
+      <div class="card-title">Galaxy Plan</div>
+      <div class="price-row">
+        <span class="price-currency">$</span>
+        <span class="price-amount">198</span>
+        <span class="price-original" style="display: none;">$198</span>
+      </div>
+      <div class="price-period">/user/month</div>
+      <a href="#" class="cta cta-primary">Buy now</a>
+      
+      <div class="card-desc">Get CRM, Phone, Dialer, SMS, Marketing Automation, Email &amp; Support Services</div>
+      <div class="divider"></div>
+      <div class="features-label">Everything in Explorer Plan PLUS</div>
+      <ul class="feature-list">
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Premium Support <span class="new-badge">New</span></li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Unlimited Minutes Per User</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function() {
+  var toggle = document.getElementById('annualToggle');
+  var cards = document.querySelectorAll('.pricing-grid .card');
+
+  function updatePrices() {
+    var isAnnual = toggle.classList.contains('active');
+    cards.forEach(function(card) {
+      var price = isAnnual ? card.getAttribute('data-annual') : card.getAttribute('data-monthly');
+      var original = isAnnual ? card.getAttribute('data-annual-original') : card.getAttribute('data-monthly-original');
+      var amountEl = card.querySelector('.price-amount');
+      var originalEl = card.querySelector('.price-original');
+      var periodEl = card.querySelector('.price-period');
+
+      amountEl.textContent = price;
+      if (original) {
+        originalEl.textContent = '$' + original;
+        originalEl.style.display = '';
+      } else {
+        originalEl.style.display = 'none';
+      }
+      periodEl.textContent = isAnnual ? '/user/month paid annually' : '/user/month';
+    });
+  }
+
+  toggle.addEventListener('click', function() {
+    toggle.classList.toggle('active');
+    toggle.setAttribute('aria-checked', toggle.classList.contains('active'));
+    updatePrices();
+  });
+
+  updatePrices();
+})();
+</script>								
